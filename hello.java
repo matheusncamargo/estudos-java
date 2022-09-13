@@ -1,36 +1,42 @@
+/*
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Arrays;
 import java.util.Locale;
 import java.time.LocalDateTime;
+ */
 
 public class Hello {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-      }
+
+    }
 }
 
 /*
-        String name = "Matheus";
-        int nota = 2;
+              String name = "Matheus";
+        String message;
+        int nota = 5;
+
 
         if (nota > 5){
-            System.out.println("Aprovado");
+            message = "Aprovado";
         } else if (nota < 3){
-            System.out.println("Reprovado");
+            message = "Reprovado";
         } else {
-            System.out.println("Em recuperação");
+            message = "Em recuperação";
         }
 
+        System.out.println(message);
         System.out.println("Hello World");
         System.out.println("Hello " + name);
  */
 
 /*
- String nome = "Matheus";
+        String nome = "Matheus";
         String outroNome = "matheus";
 
-        System.out.println(nome.equalsIgnoreCase(outroNome));
+        System.out.println(nome.equals(outroNome));
  */
 
 /*
@@ -40,30 +46,30 @@ public class Hello {
 
         // ISO 8601
         LocalDate hoje = LocalDate.now();
-
+        LocalDateTime agora = LocalDateTime.now();
         Locale brasil = new Locale("pt", "BR");
 
         String diaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil);
         String saudacao;
-        LocalDateTime agora = LocalDateTime.now();
-        int horas = agora.getHour();
+
+        float horas = agora.getHour();
 
         if (horas > 0 && horas < 12){
-           saudacao = "Bom dia!";
-        } else if (horas > 12 && horas < 18){
+            saudacao = "Bom dia!";
+        } else if (horas >= 12 && horas < 18){
             saudacao = "Boa tarde!";
-        } else {
+        } else{
             saudacao = "Boa noite";
         }
 
         System.out.printf("Olá, %s. Hoje é %s, %s.%n", nome, diaSemana, saudacao.toUpperCase());
+        System.out.println(agora
+        );
 
  */
 
 /*
- int soma = 0;
-
-        for (int i = 0; i <= 10; i++ ){
+  for (int i = 0; i <= 10; i++ ){
             for (int x = 0; x <= 10; x++){
                 System.out.println( i + " x " + x + " = " + x * i);
             }
@@ -71,8 +77,7 @@ public class Hello {
  */
 
 /*
-
-       //Array de Números
+ //Array de Números
 
         int[] numeros = new int[5];
 
@@ -99,10 +104,69 @@ public class Hello {
             System.out.println(letras[i]);
         }
 
-        //Outra forma de arrays
+        //Outra forma de escrever arrays
         String[] letras2 = {"A", "B", "C", "D"};
+        int[] numeros3 = {2,3,5,6,7};
+
+        //Imprimir arrays #1
         for (int i = 0; i<letras2.length; i++){
             System.out.println(letras2[i]);
         }
+
+        //Imprimir arrays #2
         System.out.println(Arrays.toString((letras2)));
+        System.out.println(Arrays.toString(numeros3));
+ */
+
+/*
+  //Linguagem fortemente tipada, não pode misturar tipos dentro de um mesmo ARRAY
+        int[] numeros = {3, 4, 5, 11, 25, 12, 13, 15};
+        int maior = numeros[0];
+        int menor = numeros[0];
+        int media;
+        int soma = 0;
+
+
+        for (int i = 0; i < numeros.length; i++){
+            if (numeros[i] > maior){
+                maior = numeros[i];
+            }
+
+            if (numeros [i] < menor){
+                menor = numeros[i];
+            }
+
+            soma += numeros[i];
+        }
+
+        media = soma / numeros.length;
+
+        System.out.printf("Maior: %s, Menor: %s, Média: %s", maior, menor, media);
+ */
+
+/*
+public class Hello {
+    public static void main(String[] args){
+        // Funções -> "Métodos"
+        String nome2 = "Matheus";
+        saudacao(nome2);
+    }
+
+    public static void saudacao(String nome1){
+        System.out.println("Hello " + nome1);
+    }
+}
+ */
+
+/*
+public class Hello {
+    public static void main(String[] args){
+
+        int resultado = soma(15, 45);
+        System.out.println(resultado);
+    }
+        public static int soma(int n1, int n2){
+            return n1 + n2;
+    }
+}
  */
