@@ -8,6 +8,113 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Scanner;
 
+package hello_world;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+	Locale.setDefault(Locale.US);
+	Scanner input = new Scanner(System.in);
+	
+	String x;
+	int y;
+	double z;
+	
+	x = input.next();
+	y = input.nextInt();
+	z = input.nextDouble();
+	
+	System.out.println("Dados digitados: ");
+	System.out.println(x);
+	System.out.println(y);
+	System.out.println(z);
+
+/*Digitar: maria 30 4.5*/
+		
+	}
+
+}
+
+/* 
+ 	Scanner input = new Scanner(System.in);
+		
+		double x;
+		x = input.nextDouble();
+		System.out.printf("Você digitou: %.2f", x);
+		input.close();
+ */
+
+/*
+ 		Scanner input = new Scanner(System.in);
+		
+		int x;
+		x = input.nextInt();
+		System.out.println("Você digitou: " + x);
+		input.close();
+
+ */
+
+/*
+ 		Scanner input = new Scanner(System.in);
+		
+		String x;
+		x = input.next();
+		System.out.println("Você digitou: " + x);
+		input.close();
+ */
+
+/*
+String product1 = "Computador";
+String product2 = "Mesa de escritório";
+
+int age = 30;
+int code = 5290;
+char gender = 'F';
+
+double price1 = 2100.0;
+double price2 = 650.50;
+double measure = 53.234567;
+
+System.out.printf("Produtos:%n%s, preço: R$%.2f ", product1, price1);
+System.out.printf("%n%s, preço: R$%.2f", product2, price2);
+
+System.out.printf("%n%nRecord: %d anos, código %s e sexo: %s", age, code, gender);
+
+System.out.printf("%n%s, preço: R$%.2f", product2, price2);
+
+System.out.printf("%n%n%.8f", measure);
+System.out.printf("%n%.3f", measure);
+Locale.setDefault(Locale.US);
+System.out.printf("%n%.3f", measure);
+*/
+
+/*
+
+double x = 10.34231;
+int y = 7;
+
+System.out.println("Hello World");
+System.out.print("Hello World");
+System.out.print("Hello World");
+
+System.out.printf("%.2f%n", x);
+System.out.printf("%.4f%n", x);
+
+Locale.setDefault(Locale.US);
+System.out.printf("%.4f%n", x);
+
+System.out.println("Resultado = " + x + " metros");
+System.out.printf("Temos %.2f metros de pães %n", x);
+
+String nome = "Dionísio";
+int idade = 27;
+double renda = 2550.85;
+System.out.printf("%s tem %d anos e ganha R$%.2f reais por mês%n", nome, idade, renda);
+*/
 
 
 /*
