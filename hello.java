@@ -20,6 +20,235 @@ import java.util.Scanner;
 public class Hello{
     public static void main (String[] args){
 
+
+    }
+}
+
+/*
+Lista02 - WHILE - ex03
+public class Hello{
+    public static void main (String[] args){
+
+        int alcool = 0;
+        int gasolina = 0;
+        int diesel = 0;
+
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite os valores: ");
+        int n = ipt.nextInt();
+
+        while ( n != 4){
+            if (n == 1){
+                alcool++;
+            } else if (n == 2){
+                gasolina++;
+            } else if (n == 3){
+                diesel++;
+            }
+            n = ipt.nextInt();
+
+        }
+
+        System.out.println("Muito Obrigado!");
+        System.out.printf("Alcool: %d%nGasolina: %d%nDiesel: %d", alcool, gasolina, diesel);
+        ipt.close();
+    }
+}
+ */
+
+/*
+Lista02 - WHILE - ex02
+public class Hello{
+    public static void main (String[] args){
+
+        Scanne
+        r ipt = new Scanner(System.in);
+        System.out.println("Digite as coordendas (X,Y): ");
+        int x = ipt.nextInt();
+        int y = ipt.nextInt();
+
+        while (x != 0 && y != 0){
+            if (x > 0 && y > 0){
+                System.out.println("1 Quadrante");
+            } else if (x > 0 && y < 0){
+                System.out.println("4 Quadrante");
+            } else if (x < 0 && y > 0){
+                System.out.println("2 Quadrante");
+            } else if (x < 0 && y < 0){
+                System.out.println("3 Quadrante");
+            }
+            x = ipt.nextInt();
+            y = ipt.nextInt();
+        }
+        ipt.close();
+
+    }
+}
+ */
+
+/*
+Lista02 - WHILE - ex01
+public class Hello{
+    public static void main (String[] args){
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite a senha: ");
+        int senha = ipt.nextInt();
+
+        while (senha != 2002){
+            System.out.println("Senha inválida");
+            senha = ipt.nextInt();
+        }
+        System.out.println("Acesso liberado");
+        ipt.close();
+    }
+}
+ */
+
+/*
+Lista01 - FOR - ex07
+public class Hello{
+    public static void main (String[] args){
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite o número de linhas: ");
+        int n = ipt.nextInt();
+
+        for (int i = 1; i <= n; i++){
+                int a = i;
+                int b = (int) Math.pow(a,2);
+                int c = (int) Math.pow(a,3);
+                System.out.printf("%d %d %d%n", a, b, c);
+        }
+
+    }
+}
+ */
+
+/*
+Lista01 - FOR - ex06
+public class Hello{
+    public static void main (String[] args){
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite o número: ");
+        int n = ipt.nextInt();
+        int x = 1;
+
+        for (int i = 1; i <= n; i++){
+            if (n % i == 0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+ */
+
+/*
+Lista01 - FOR - ex05
+public class Hello{
+    public static void main (String[] args){
+
+        int fat = 1;
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int n = ipt.nextInt();
+
+        for (int i = 1; i <= n; i++){
+           fat = fat * i;
+        }
+        System.out.println(fat);
+    }
+}
+
+ */
+
+/*
+Lista 01 - FOR - ex04
+public class Hello{
+    public static void main (String[] args){
+
+        int x1, x2;
+        double divisao;
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite um número N: ");
+        int n = ipt.nextInt();
+
+        for (int i = 0; i < n; i++){
+            x1 = ipt.nextInt();
+            x2 = ipt.nextInt();
+
+            if (x2 == 0){
+                System.out.println("Divisão impossível");
+            } else {
+                divisao = x1/x2;
+                System.out.println(divisao);
+            }
+
+        }
+
+
+    }
+}
+ */
+
+/*
+List01 - FOR - Ex. 03
+public class Hello{
+    public static void main (String[] args){
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite o número de casos-teste: ");
+        int n = ipt.nextInt();
+
+        System.out.println("Digite os números: ");
+        for (int i = 0; i < n; i++){
+            double a = ipt.nextDouble();
+            double b = ipt.nextDouble();
+            double c = ipt.nextDouble();
+            double media = (a*2 + b*3 + c*5)/3;
+            System.out.println(media);
+        }
+
+    }
+}
+ */
+
+/*
+Lista01 - FOR - Ex. 02
+
+public class Hello{
+    public static void main (String[] args){
+
+        int n, x;
+        int in = 0;
+        int out = 0;
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite quantos números serão lidos: ");
+        n = ipt.nextInt();
+
+
+        for (int i = 0; i < n; i++){
+            x = ipt.nextInt();
+            if (x >= 10 && x <= 20){
+                in++;
+            } else {
+                out++;
+            }
+        }
+
+        System.out.println(in + " in");
+        System.out.println(out + " out");
+    }
+}
+ */
+
+/*
+
         double media = 0;
 
         Scanner ipt = new Scanner(System.in);
@@ -36,9 +265,7 @@ public class Hello{
                 System.out.println(media);
             }
         }
-
-    }
-}
+ */
 
 /*
   int n;
@@ -507,13 +734,9 @@ public class Hello{
 }
  */
 
+
 /*
-import java.util.Scanner;
-
-public class Main {
-
-	public static void main(String[] args) {
-		
+ * 
         int n;
         double x = 0;
         double media = 0;
@@ -530,13 +753,10 @@ public class Main {
             }
             media = (x/3);
             System.out.println(media);
-        }
-		
-		}
-		
-}
+            }
+ */
 
-
+/*
  * 	int x = 8;
 		int y = 3;
 		
@@ -660,83 +880,83 @@ public class Main {
 
 /*
  * Scanner input = new Scanner(System.in);
- * 
+ *
  * String s1, s2, s3; System.out.println("Digite 3 dados: "); s1 =
  * input.nextLine(); s2 = input.nextLine(); s3 = input.nextLine();
- * 
+ *
  * System.out.println("Dados digitados:"); System.out.println(s1);
  * System.out.println(s2); System.out.println(s3);
- * 
+ *
  */
 
 /*
  * Locale.setDefault(Locale.US); Scanner input = new Scanner(System.in);
- * 
+ *
  * String x; int y; double z;
- * 
+ *
  * System.out.println("Digite três dados: ");
- * 
+ *
  * x = input.next(); y = input.nextInt(); z = input.nextDouble();
- * 
+ *
  * System.out.println("Dados digitados: "); System.out.println(x);
  * System.out.println(y); System.out.println(z); /*Digitar: maria 30 4.5
  */
 
 /*
  * Scanner input = new Scanner(System.in);
- * 
+ *
  * double x; System.out.println("Digite um número: "); x = input.nextDouble();
  * System.out.printf("Você digitou: %.2f", x); input.close();
  */
 
 /*
  * Scanner input = new Scanner(System.in);
- * 
+ *
  * int x; x = input.nextInt(); System.out.println("Você digitou: " + x);
  * input.close();
- * 
+ *
  */
 
 /*
  * Scanner input = new Scanner(System.in);
- * 
+ *
  * String x; x = input.next(); System.out.println("Você digitou: " + x);
  * input.close();
  */
 
 /*
  * String product1 = "Computador"; String product2 = "Mesa de escritório";
- * 
+ *
  * int age = 30; int code = 5290; char gender = 'F';
- * 
+ *
  * double price1 = 2100.0; double price2 = 650.50; double measure = 53.234567;
- * 
+ *
  * System.out.printf("Produtos:%n%s, preço: R$%.2f ", product1, price1);
  * System.out.printf("%n%s, preço: R$%.2f", product2, price2);
- * 
+ *
  * System.out.printf("%n%nRecord: %d anos, código %s e sexo: %s", age, code,
  * gender);
- * 
+ *
  * System.out.printf("%n%s, preço: R$%.2f", product2, price2);
- * 
+ *
  * System.out.printf("%n%n%.8f", measure); System.out.printf("%n%.3f", measure);
  * Locale.setDefault(Locale.US); System.out.printf("%n%.3f", measure);
- * 
+ *
  */
 
 /*
  * double x = 10.34231; int y = 7;
- * 
+ *
  * System.out.println("Hello World"); System.out.print("Hello World");
  * System.out.print("Hello World");
- * 
+ *
  * System.out.printf("%.2f%n", x); System.out.printf("%.4f%n", x);
- * 
+ *
  * Locale.setDefault(Locale.US); System.out.printf("%.4f%n", x);
- * 
+ *
  * System.out.println("Resultado = " + x + " metros");
  * System.out.printf("Temos %.2f metros de pães %n", x);
- * 
+ *
  * String nome = "Dionísio"; int idade = 27; double renda = 2550.85;
  * System.out.printf("%s tem %d anos e ganha R$%.2f reais por mês%n", nome,
  * idade, renda);
