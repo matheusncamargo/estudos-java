@@ -17,12 +17,46 @@ import java.util.stream.Stream;
 
 import java.util.Scanner;
 
-public class Hello{
-    public static void main (String[] args){
-
+public class Hello {
+    public static void main(String[] args){
 
     }
 }
+
+/*
+public class Hello{
+    public static void main (String[] args){
+
+        Scanner ipt = new Scanner(System.in);
+        System.out.println("Digite três números: ");
+        int n1 = ipt.nextInt();
+        int n2 = ipt.nextInt();
+        int n3 = ipt.nextInt();
+
+        int maior = max(n1, n2, n3);
+        showResult(maior);
+    }
+
+    public static int max(int a, int b, int c){
+        int aux;
+
+        if (a > b && a > c){
+            aux = a;
+        } else if (b > c){
+            aux = b;
+        } else{
+            aux = c;
+        }
+
+        return aux;
+    }
+
+    public static void showResult(int value){
+        System.out.println("Maior número: " + value);
+    }
+
+}
+ */
 
 /*
 Lista02 - WHILE - ex03
@@ -736,7 +770,7 @@ public class Hello{
 
 
 /*
- * 
+ *
         int n;
         double x = 0;
         double media = 0;
@@ -759,7 +793,7 @@ public class Hello{
 /*
  * 	int x = 8;
 		int y = 3;
-		
+
 		for (int i = 0; y < x; i++) {
 			x = x - 2;
 			y = y + 1;
@@ -767,12 +801,12 @@ public class Hello{
  */
 
 /*
- * 	 
+ *
 		int x = 4;
 		int y = 0;
-		
+
 		for (int i = 0; i < x; i++) {
-			y = y + i;	
+			y = y + i;
 	}
 		System.out.println(y);
  */
@@ -788,7 +822,7 @@ public class Hello{
 /*
  * 	int x = 4;
 		int y = x + 2;
-		
+
 		for (int i=0; i<x; i++) {
 			System.out.print(x+" "+y);
 			y = y + i;
@@ -796,15 +830,15 @@ public class Hello{
  */
 /*
  * 		Scanner sc = new Scanner(System.in);
-		
+
 		int x = sc.nextInt();
 		int soma = sc.nextInt();
-		
+
 		while (x != 0) {
 			soma += x;
 			x = sc.nextInt();
 		}
-		
+
 		System.out.println(soma);
  */
 
@@ -814,21 +848,21 @@ public class Hello{
 		double preco;
 		double area;
 		double valor;
-		
+
 		Scanner input = new Scanner(System.in);
-		
+
 		System.out.println("Digite a largura do terreno: ");
 		largura = input.nextDouble();
-		
+
 		System.out.println("Digite o comprimento do terreno: ");
 		comprimento = input.nextDouble();
-		
+
 		System.out.println("Digite o preco do terreno: ");
 		preco = input.nextDouble();
-		
+
 		area = largura * comprimento;
 		valor = area * preco;
-		
+
 		System.out.printf("AREA: %.2fm², %nPRECO: R$%.2f", area, valor);
  */
 
@@ -844,35 +878,35 @@ public class Hello{
 		double preco;
 		double area;
 		double valor;
-		
+
 		Scanner input = new Scanner(System.in);
 		System.out.println("Digite a largura do terreno: ");
 		largura = input.nextDouble();
-		
+
 		System.out.println("Digite o comprimento do terreno: ");
 		comprimento = input.nextDouble();
-		
+
 		System.out.println("Digite o preco do terreno: ");
 		preco = input.nextDouble();
-		
+
 		area = largura * comprimento;
 		valor = area * preco;
-		
+
 		System.out.printf("AREA: %.2fm², %nPRECO: R$%.2f", area, valor);
-		
+
  */
 
 /*
- 	
+
 		Scanner ipt = new Scanner(System.in);
-		
+
 		String s1, s2, s3;
-		
+
 		/*Escreve o tanto que quiser*//*
 		s1 = ipt.nextLine();
 		s2 = ipt.nextLine();
 		s3 = ipt.nextLine();
-		
+
 		System.out.println(s1);
 		System.out.println(s2);
 		System.out.println(s3);
