@@ -17,11 +17,144 @@ import java.util.stream.Stream;
 
 import java.util.Scanner;
 
-public class Hello {
-    public static void main(String[] args){
+public class Application {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double soma = 0;
+        double n1;
+        double n2;
 
+        if (args.length == 0){
+            System.out.println("Digite o primeiro número: ");
+            n1 = sc.nextDouble();
+
+            System.out.println("Digite o segundo número: ");
+            n2 = sc.nextDouble();
+
+            soma = n1 + n2;
+        } else if (args.length == 1){
+            System.out.println("Digite o primeiro número: ");
+            n1 = sc.nextDouble();
+
+            n2 = Double.parseDouble(args[0]);
+
+            soma = n1 + n2;
+        } else if (args.length == 2){
+            n1 = Double.parseDouble(args[0]);
+            n2 = Double.parseDouble(args[1]);
+
+            soma = n1 + n2;
+        } else {
+            System.out.println("Quantidade de parâmetros inválida");
+        }
+        System.out.println(soma);
     }
 }
+/*
+    public class Application {
+
+    public static final Double fator1 = (double) 9/5;
+    public static final Integer fator2 = 32;
+
+    public static void main(String[] args) {
+        System.out.println(conversor(20));
+        System.out.println(conversor(25));
+        System.out.println(conversor(33));
+    }
+    public static double conversor(double celsius){
+        double fahrenheit = (celsius * fator1) + fator2;
+        return fahrenheit;
+    }
+}
+
+
+/*
+  double f1 = (double) 9/5;
+        System.out.println(f1);
+ */
+
+
+/*
+public class Application {
+    public static void main(String[] args) {
+        System.out.println((Integer.parseInt(args[0]) % 2 == 0 ? "O número é par" : "O número é ímpar"));
+    }
+}
+ */
+
+/*
+import java.util.Scanner;
+public class Application {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite o primeiro número: ");
+        double n1 = sc.nextDouble();
+
+        System.out.println("Digite o segundo número: ");
+        double n2 = sc.nextDouble();
+
+        System.out.printf("1- Adição %n2- Subtração %n3- Multiplicação %n4- Divisão %nDigite o número da operação que deseja realizar: ");
+        double option = sc.nextInt();
+
+        if (option == 1){
+            System.out.println(n1 + n2);
+        } else if (option == 2){
+            System.out.println(n1 - n2);
+        } else if (option == 3){
+            System.out.println(n1 * n2);
+        } else if (option == 4){
+            System.out.println((n2 == 0 ? "Divisão impossível" : n1 / n2));
+        }
+    }
+}
+ */
+
+/*
+import java.util.Scanner;
+
+public class Application {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double soma = 0;
+        double n1;
+        double n2;
+
+        if (args.length == 0){
+            System.out.println("Digite o primeiro número: ");
+            n1 = sc.nextDouble();
+
+            System.out.println("Digite o segundo número: ");
+            n2 = sc.nextDouble();
+
+            soma = n1 + n2;
+        } else if (args.length == 1){
+            System.out.println("Digite o primeiro número: ");
+            n1 = sc.nextDouble();
+
+            n2 = Double.parseDouble(args[0]);
+
+            soma = n1 + n2;
+        } else if (args.length == 2){
+            n1 = Double.parseDouble(args[0]);
+            n2 = Double.parseDouble(args[1]);
+
+            soma = n1 + n2;
+        } else {
+            System.out.println("Quantidade de parâmetros inválida");
+        }
+        System.out.println(soma);
+    }
+}
+ */
+
+/*
+public class Application {
+    public static void main(String[] args) {
+        System.out.println((Double.parseDouble(args[0]) % 2 == 0 ? "O número é par" : "O número é ímpar"));
+    }
+}
+ */
 
 /*
 public class Hello{
