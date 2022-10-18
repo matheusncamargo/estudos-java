@@ -15,7 +15,68 @@ import java.util.*;
 import java.util.stream.Stream;
  */
 
+
+
+/*
+
+package entitites;
+
+public class Student {
+
+    public String name;
+    public double n1;
+    public double n2;
+    public double n3;
+
+    public double finalGrade(){
+        return n1 + n2 + n3;
+    }
+
+    public String passOrFail(){
+        String prf;
+        double missing = 0;
+
+        if (finalGrade() >= 60){
+            prf = "PASS";
+        } else {
+            prf = "FAIL";
+            missing = (60 - finalGrade());
+        }
+        return prf + " " + missing;
+    }
+
+    public String toString(){
+        return "FINAL GRADE = " + String.format("%.2f", finalGrade()) + " " + passOrFail();
+    }
+}
+
+
+package app;
+
+import entitites.Student;
 import java.util.Scanner;
+
+public class Program {
+
+    public static void main(String[] args){
+
+        Scanner ipt = new Scanner(System.in);
+        Student std = new Student();
+
+        System.out.println("Digite o nome do aluno: ");
+        std.name = ipt.nextLine();
+
+        System.out.println("Digite as notas do aluno: ");
+        std.n1 = ipt.nextDouble();
+        std.n2 = ipt.nextDouble();
+        std.n3 = ipt.nextDouble();
+
+        System.out.println(std);
+
+    }
+
+}
+
 
 public class Application {
     public static void main(String[] args) {
@@ -50,7 +111,7 @@ public class Application {
         System.out.println(soma);
     }
 }
-/*
+
     public class Application {
 
     public static final Double fator1 = (double) 9/5;
