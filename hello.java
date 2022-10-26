@@ -19,6 +19,23 @@ import java.util.stream.Stream;
 
 /*
 
+public class Ex1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Rectangle ret = new Rectangle();
+
+        System.out.println("Digite a largura: ");
+        ret.width = sc.nextDouble();
+
+        System.out.println("Digite a altura: ");
+        ret.height = sc.nextDouble();
+
+        System.out.println("A area é de:");
+        System.out.println(ret.area());
+    }
+}
+
+
 package entitites;
 
 public class Student {
