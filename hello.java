@@ -19,6 +19,29 @@ import java.util.stream.Stream;
 
 /*
 
+public class Ex2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Employee emp = new Employee();
+
+        System.out.println("Nome: ");
+        emp.name = sc.nextLine();
+
+        System.out.println("Salário bruto: ");
+        emp.grossSalary = sc.nextDouble();
+
+        System.out.println("Taxa: ");
+        emp.tax = sc.nextDouble();
+
+        System.out.println(emp);
+
+        System.out.println("Quanto deseja aumentar no salário: ");
+        emp.increaseSalary(sc.nextDouble());
+
+        System.out.println(emp.grossSalary);
+    }
+}
+
 public class Ex1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
