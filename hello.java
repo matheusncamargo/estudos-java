@@ -19,6 +19,38 @@ import java.util.stream.Stream;
 
 /*
 
+
+public class Ex3_Vetores {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite a quantidade de itens: ");
+        int n = sc.nextInt();
+
+        Produto[] vect = new Produto[n];
+
+        for (int i=0; i<vect.length; i++) {
+            sc.nextLine();
+            System.out.print("Digite o nome do item: ");
+            String nome = sc.nextLine();
+            System.out.print("Digite o valor do item: ");
+            double valor = sc.nextDouble();
+            vect[i] = new Produto(nome, valor);
+        }
+
+        double sum = 0.0;
+        for (int i=0; i<vect.length; i++) {
+            sum += vect[i].getValor();
+        }
+
+        double avg = sum / vect.length;
+        System.out.printf("AVERAGE PRICE = %.2f%n", avg);
+
+    }
+}
+
+
 public class Ex2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
