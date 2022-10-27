@@ -19,6 +19,62 @@ import java.util.stream.Stream;
 
 /*
 
+public class Ex5_Vetores_Fixacao_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos números você vai digitar? ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        for (int i = 0; i < arr.length; i++){
+            System.out.print("Digite um número: ");
+            arr[i] = sc.nextInt();
+        }
+
+        double soma = 0;
+
+        for(int j = 0; j < arr.length; j++){
+            soma += arr[j];
+        }
+
+        double media = soma / arr.length;
+
+        System.out.println("Valores: " + Arrays.toString(arr));
+        System.out.println("Soma: " + soma);
+        System.out.println("Media: " + media);
+
+    }
+}
+
+  
+public class Ex4_Vetores_Fixacao {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos números você vai digitar? ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        for (int i = 0; i < arr.length; i++){
+            System.out.print("Digite um número: ");
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Números negativos: ");
+        for(int i = 0; i < arr.length; i++){
+            if (arr[i] < 0){
+                System.out.println(arr[i]);
+            }
+        }
+
+        System.out.println(Arrays.toString(arr));
+
+
+    }
+}
 
 public class Ex3_Vetores {
     public static void main(String[] args) {
