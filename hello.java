@@ -19,6 +19,103 @@ import java.util.stream.Stream;
 
 /*
 
+public class Ex8_Vet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos números serão digitados? ");
+        int n = sc.nextInt();
+
+        int[] vetorA = new int[n];
+        int soma = 0;
+        double media;
+
+        for (int i = 0; i < vetorA.length; i++){
+            System.out.println("Digite um número - vetorA: ");
+            vetorA[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < vetorA.length; i++){
+            soma += vetorA[i];
+        }
+
+        media = soma/vetorA.length;
+
+        System.out.println("Media = " + media);
+        System.out.println("Elementos abaixo da média: ");
+        for (int i = 0; i < vetorA.length; i++){
+           if (vetorA[i] < media){
+               System.out.println(vetorA[i]);
+           }
+        }
+
+    }
+}
+
+public class Ex7_Vet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos números serão digitados? ");
+        int n = sc.nextInt();
+
+        int[] vetorA = new int[n];
+        int[] vetorB = new int[n];
+        int[] vetorC = new int[n];
+
+        for (int i = 0; i < vetorA.length; i++){
+            System.out.println("Digite um número - vetorA: ");
+            vetorA[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < vetorB.length; i++){
+            System.out.println("Digite um número - vetorB: ");
+            vetorB[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < vetorA.length; i++){
+            vetorC[i] = vetorA[i] + vetorB[i];
+        }
+
+        System.out.println(Arrays.toString(vetorC));
+    }
+}
+
+
+public class Ex6_Vetores_Fixacao_5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos números irá digitar? ");
+        int n = sc.nextInt();
+
+        int[] numeros = new int[n];
+
+        for(int i = 0; i < numeros.length; i++){
+            System.out.print("Digite um número: ");
+            numeros[i] = sc.nextInt();
+        }
+
+        int maior = 0;
+        int posicao = 0;
+
+        for(int i = 0; i < numeros.length; i++){
+            if (numeros[i] > maior){
+                maior = numeros[i];
+                posicao = i;
+            }
+        }
+
+        System.out.println(maior);
+        System.out.println(posicao);
+
+
+
+    }
+}
+
+
+
 public class Ex5_Vetores_Fixacao_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
