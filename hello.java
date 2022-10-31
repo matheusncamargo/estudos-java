@@ -19,6 +19,108 @@ import java.util.stream.Stream;
 
 /*
 
+public class Ex11_Vet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Quantos alunos você vai digitar? ");
+        int n = sc.nextInt();
+
+        String[] nomes = new String[n];
+        int[] notas = new int[n];
+        int[] notas2 = new int[n];
+
+
+        for (int i = 0; i < notas.length; i++){
+            System.out.println("Dados do " + i + "o aluno:");
+            System.out.print("Nome, primeira e segunda notas: ");
+            nomes[i] = sc.next();
+            notas[i] = sc.nextInt();
+            notas2[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < notas.length; i++){
+           if ((notas[i] + notas2[i]) / 2 > 6){
+               System.out.println(nomes[i] + " aprovado!");
+           }
+        }
+
+    }
+}
+
+
+
+public class Ex10_Vet {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+        System.out.println("Quantas pessoa você vai digitar? ");
+        int n = sc.nextInt();
+
+        String[] nomes = new String[n];
+        int[] idades = new int[n];
+
+
+        for (int i = 0; i < idades.length; i++){
+            System.out.println("Dados da " + i + "a pessoa:");
+            System.out.print("Nome: ");
+            nomes[i] = sc.next();
+
+            System.out.print("Idade: ");
+            idades[i] = sc.nextInt();
+        }
+
+        int maisVelho = idades[0];
+        String nomeMaisVelho = nomes[0];
+
+        for (int i = 0; i < idades.length; i++){
+            if (idades[i] > maisVelho){
+                maisVelho = idades[i];
+                nomeMaisVelho = nomes[i];
+            }
+        }
+
+        System.out.println(nomeMaisVelho);
+        System.out.println(maisVelho);
+    }
+}
+
+
+public class Ex9_Vet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos números serão digitados? ");
+        int n = sc.nextInt();
+
+        int[] vetor = new int[n];
+        int somaPar = 0;
+        int somaMedia = 0;
+        double media = 0;
+
+        for (int i = 0; i < vetor.length; i++){
+            System.out.println("Digite um número: ");
+            vetor[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < vetor.length; i++){
+            if (vetor[i] % 2 == 0){
+                somaPar++;
+                somaMedia += vetor[i];
+            }
+        }
+
+        if (somaPar > 0){
+            media = somaMedia/somaPar;
+            System.out.println("Media dos pares = " + media);
+        } else {
+            System.out.println("Nenhum numero par");
+        }
+
+    }
+}
+
+
 public class Ex8_Vet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
