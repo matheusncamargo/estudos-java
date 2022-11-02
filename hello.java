@@ -19,6 +19,71 @@ import java.util.stream.Stream;
 
 /*
 
+public class Ex12_Vet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Quantas pessoas serão inseridas?  ");
+        int n = sc.nextInt();
+
+        double[] alturas = new double[n];
+        char[] genero = new char[n];
+
+        for (int i = 0; i < alturas.length; i++){
+            System.out.print("Atura da " + i + "a pessoa: ");
+            alturas[i] = sc.nextDouble();
+
+            System.out.print("Gênero: ");
+            genero[i] = sc.next().charAt(0);
+
+            System.out.println();
+        }
+
+        double maiorAltura = alturas[0];
+        double menorALtura = alturas[0];
+        double mediaAlturaMulheres;
+        double alturaMulheres = 0;
+        int numeroMulheres = 0;
+        int numeroHomens = 0;
+
+        for (int i = 0; i < alturas.length; i++){
+          if (alturas[i] > maiorAltura){
+              maiorAltura = alturas[i];
+          }
+        }
+
+        for (int i = 0; i < alturas.length; i++){
+            if (alturas[i] < menorALtura){
+                menorALtura = alturas[i];
+            }
+        }
+
+        for (int i = 0; i < genero.length; i++){
+            if (genero[i] == 'M'){
+                numeroHomens++;
+            }
+        }
+
+        for (int i = 0; i < genero.length; i++){
+            if (genero[i] == 'F'){
+                alturaMulheres += alturas[i];
+                numeroMulheres++;
+            }
+        }
+
+        mediaAlturaMulheres = alturaMulheres / numeroMulheres;
+
+        System.out.println(maiorAltura);
+        System.out.println(menorALtura);
+        System.out.println(numeroHomens);
+        System.out.println(mediaAlturaMulheres);
+
+
+    }
+}
+
+
+
 public class Ex11_Vet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
