@@ -19,6 +19,99 @@ import java.util.stream.Stream;
 
 /*
 
+public class Listas {
+    public static void main(String[] args) {
+        String vect[] = {"Maria", "Matheus", "Tadeu"};
+
+        //Para cada objeto "obj" contido no vetor "vect", faça:
+        for (String obj : vect){
+            System.out.println(obj);
+        }
+        System.out.println("*-------------*");
+
+        //Lista
+        List<String> list = new ArrayList<>();
+
+        list.add("João");
+        list.add("Amaranto");
+        list.add("Maria");
+        list.add("Kleber");
+        list.add("Marta");
+        list.add("Amadeu");
+
+        /*list.add(1, "Guilhermino");*/
+        list.remove(2);
+
+        System.out.println(list.size());
+
+        for (String x : list){
+            System.out.println(x);
+        }
+
+        System.out.println("*-------------*");
+        list.removeIf(x -> x.charAt(0) == 'M');
+
+        for (String x : list){
+            System.out.println(x);
+        }
+
+        System.out.println("*-------------*");
+        System.out.println("Index do Kleber: " + list.indexOf("Kleber"));
+        System.out.println("Index do Luiz: " + list.indexOf("Luiz"));
+
+        System.out.println("*-------------*");
+        //list.stream() -> converte para String (para usar o filter)
+        //.filter() -> Filtra em determinada condição
+        //.collect() -> converte para lista
+        List <String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
+
+        for (String x : result){
+            System.out.println(x);
+        }
+
+        System.out.println("*-------------*");
+        //.findFirst -> pega primeiro elemento da String
+        //.orElse -> Se não encontrar o elemeno, retornará "null"
+        String name = list.stream().filter(x -> x.charAt(0) == 'A').findFirst().orElse(null);
+        System.out.println(name);
+    }
+}
+
+public class ExDesafio_Vet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos quartos serão alugados?");
+        int n = sc.nextInt();
+        int numeroQuarto = 0;
+
+        Rent[] vetor = new Rent[10];        //Criação de um vetor baseado na entidade "Rent"
+
+        for (int i = 0; i < n; i++){
+            System.out.println("\nRent #" + i);
+            System.out.print("Nome: ");
+            sc.nextLine();                          //Limpar o buffer
+            String nome = sc.next();
+
+            System.out.print("Email: ");
+            String email = sc.next();
+
+            System.out.print("Quarto: ");
+            numeroQuarto = sc.nextInt();
+
+           vetor[numeroQuarto] =  new Rent(nome, email);  //Instanciando o vetor da entidade
+        }
+
+        System.out.println("Quartos ocupados:");
+        for (int i = 0; i < vetor.length; i++){
+            if (vetor[i] != null){
+                System.out.println(i + ": " + vetor[i]);
+            }
+        }
+
+    }
+}
+
 public class Ex12_Vet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
