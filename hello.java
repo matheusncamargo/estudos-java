@@ -19,6 +19,97 @@ import java.util.stream.Stream;
 
 /*
 
+
+public class Matrizes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a quantidade de linhas e colunas da matriz: ");
+        int n = sc.nextInt();
+        int[][] mat = new int[n][n];
+
+        for (int i = 0; i < mat.length; i++){
+            for (int j = 0; j < mat[i].length; j++){
+                mat[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Diagonal principal: ");
+        for (int i = 0; i < mat.length; i++){
+            System.out.println(mat[i][i] + " ");
+            }
+
+        int somaNegativo = 0;
+        for (int i = 0; i < mat.length; i++){
+            for (int j = 0; j < mat[i].length; j++){
+                if (mat[i][j] < 0){
+                    somaNegativo++;
+                }
+            }
+        }
+
+        System.out.println("Números negativos: " + somaNegativo);
+    }
+}
+
+
+public class Listas_Ex {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Quantos funcionários serão registrados? ");
+        int n = sc.nextInt();
+
+        List<FuncionariosListas> list = new ArrayList<>();   //Cria uma lista modificável (ArrayList)
+
+       for (int i = 0; i < n; i++){
+           System.out.println("\nFuncionário #" + (i + 1));
+
+           System.out.print("Id: ");
+           Integer id = sc.nextInt();
+           sc.nextLine();
+
+           System.out.print("Nome: ");
+           String nome = sc.nextLine();
+
+           System.out.print("Salário: ");
+           Double salario = sc.nextDouble();
+
+           FuncionariosListas func = new FuncionariosListas(nome, id, salario);
+           list.add(func);
+       }
+
+       System.out.println("\nDigite o ID do funcionário que terá aumento salarial: ");
+       int idFuncionario = sc.nextInt();
+
+       Integer pos = position(list, idFuncionario);
+
+       if (pos == null){
+           System.out.println("\nID não encontrado");
+       } else {
+           System.out.println("\nEntre com uma porcentagem: ");
+           double percente = sc.nextDouble();
+
+           list.get(pos).increaseSalary(percente);
+       }
+
+        System.out.println("\nLista de funcionários: ");
+
+       for (FuncionariosListas func : list){
+           System.out.println(func);
+       }
+    }
+
+    //Função para dizer a posição do funcionário na lista
+    public static Integer position(List<FuncionariosListas> list, int id){
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i).getId() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+
 public class Listas {
     public static void main(String[] args) {
         String vect[] = {"Maria", "Matheus", "Tadeu"};
