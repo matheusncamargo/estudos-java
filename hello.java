@@ -19,6 +19,76 @@ import java.util.stream.Stream;
 
 /*
 
+public class N_Data_Hora {
+    public static void main(String[] args) {
+
+        //customizar formato de data e hora
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        LocalDate d01 = LocalDate.now();
+        LocalDateTime d02 = LocalDateTime.now();
+        Instant d03 = Instant.now();
+
+        LocalDate d04 = LocalDate.parse("2022-07-20");
+        LocalDateTime d05 = LocalDateTime.parse("2022-07-20T01:30:26");
+        Instant d06 = Instant.parse("2022-07-20T01:30:26Z");
+        //Instant d07 = Instant.parse("2022-07-20T01:30:26-03:00");
+        //-3:00 -> indica UTC-3:00 (horário de São Paulo)
+
+        LocalDate d08 = LocalDate.parse("20/07/2022", fmt1);
+
+        LocalDate d10 = LocalDate.of(2022, 7, 20);
+        LocalDateTime d11 = LocalDateTime.of(2022, 7, 20, 1, 30);
+
+        System.out.println(d01);
+        System.out.println(d02);
+        System.out.println(d03);
+        System.out.println(d04);
+        System.out.println(d05);
+        System.out.println("Horário de Londres: " + d06.toString());
+        //.toString() -> converte automaticamente para o padrão texto-ISO8601
+        System.out.println(d08);
+
+        System.out.println(d10);
+        System.out.println(d11);
+
+
+    }
+}
+
+public class Matrizes_Ex {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite a quantidade de linhas: ");
+        int l = sc.nextInt();
+
+        System.out.print("Digite a quantidade de colunas: ");
+        int c = sc.nextInt();
+
+        int[][] mat = new int[l][c];
+
+        for (int i = 0; i < mat.length; i++){
+            for (int j = 0; j < mat[i].length; j++){
+                mat[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Digite o número para busca: ");
+        int n = sc.nextInt();
+
+        for (int i = 0; i < mat.length; i++){
+            for (int j = 0; j < mat[i].length; j++){
+                if (mat[i][j] == n){
+                    System.out.println("Posição: " + i + ", " + j);
+
+
+                }
+            }
+        }
+    }
+}
+
 
 public class Matrizes {
     public static void main(String[] args) {
