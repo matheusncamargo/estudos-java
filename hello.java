@@ -19,6 +19,96 @@ import java.util.stream.Stream;
 
 /*
 
+//ENTITIES
+
+public class FuncionariosListas {
+
+    private String nome;
+    private Integer id;
+    private Double salario;
+
+    public FuncionariosListas(String nome, int id, double salario) {
+        this.nome = nome;
+        this.id = id;
+        this.salario = salario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return
+                id + ", " + nome + ", " + String.format("%.2f", salario);
+    }
+
+    public void increaseSalary (double percentage){
+        salario += salario * percentage / 100;
+    }
+}
+
+
+public class Employee {
+    public String name;
+    public double grossSalary;
+    public double tax;
+
+    public double netSalary(){
+        return grossSalary - tax;
+    }
+
+    public void increaseSalary(double percentage){
+        grossSalary *= percentage;
+    }
+
+    public String toString(){
+        return "Funcionário: "
+                + name
+                + ", "
+                + netSalary();
+    }
+
+}
+
+
+
+public class N_Operacoes_Data_Hora {
+    public static void main(String[] args) {
+
+        LocalDate d04 = LocalDate.parse("2022-07-20");
+        LocalDateTime d05 = LocalDateTime.parse("2022-07-20T01:30:26");
+        Instant d06 = Instant.parse("2022-07-20T01:30:26Z");
+
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        System.out.println(d04);
+        System.out.println("d04 = " + d04.format(fmt1));
+        System.out.println("d04 = " + fmt1.format(d04));
+    }
+}
+
+
 public class N_Data_Hora {
     public static void main(String[] args) {
 
