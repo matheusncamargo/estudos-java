@@ -21,6 +21,62 @@ import java.util.stream.Stream;
 
 //ENTITIES
 
+public class Rectangle {
+
+    public double width;
+    public double height;
+
+    public double area(){
+        return width * height;
+    }
+
+    public double perimeter(){
+        return width * 2;
+    }
+
+    public double diagonal(){
+        return width * 3;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle " +
+                "area = " + area() +
+                "\n perimeter = " + perimeter() +
+                "\n Diagonal = " + diagonal();
+    }
+}
+
+
+
+public class Produto {
+
+    private String nome;
+    private double valor;
+    public Produto(String nome, double valor) {
+        this.nome = nome;
+        this.valor = valor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+}
+
+
 public class FuncionariosListas {
 
     private String nome;
@@ -92,6 +148,7 @@ public class Employee {
 }
 
 
+//Application
 
 public class N_Operacoes_Data_Hora {
     public static void main(String[] args) {
