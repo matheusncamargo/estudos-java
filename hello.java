@@ -186,6 +186,18 @@ public class Employee {
 
 //Application
 
+public class Questao02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite a idade do eleitor: ");
+        int idade = sc.nextInt();
+
+        String mensagem = (idade >= 18 && idade <= 70 ? "Voto obrigatório!" : (idade >= 16 && idade < 18) || idade > 70 ? "Voto facultativo" : "Sem direito a votar" );
+        System.out.println(mensagem);
+    }
+}
+
 public class N_Operacoes_Data_Hora {
     public static void main(String[] args) {
 
