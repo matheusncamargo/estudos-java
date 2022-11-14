@@ -186,6 +186,44 @@ public class Employee {
 
 //Application
 
+
+public class Questao03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.printf(
+                "\n1 - Coca-Cola - R$ 5" +
+                "\n2 - Coca-Cola Zero - R$ 4.50" +
+                "\n3 - Pepsi - R$ 4,40" +
+                "\n4 - Guaraná Antarctica - R$ 3,50" +
+                "\n5 - Fanta Laranja - R$ 4,23" +
+                "\n6 - Água - R$ 2,50 " +
+                        "\nSelecione o número da bebida desejada: ");
+        int numero = sc.nextInt();
+
+        switch (numero){
+            case (1):
+                System.out.println("Coca-Cola - R$ 5");
+                break;
+            case (2):
+                System.out.println("Coca-Cola Zero - R$ 4.50");
+                break;
+            case (3):
+                System.out.println("Pepsi - R$ 4,40");
+                break;
+            case (4):
+                System.out.println("Guaraná Antarctica - R$ 3,50");
+                break;
+            case (5):
+                System.out.println("Fanta Laranja - R$ 4,23");
+                break;
+            case (6):
+                System.out.println("Água - R$ 2,50");
+                break;
+        }
+    }
+}
+
 public class Questao02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
