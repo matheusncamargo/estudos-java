@@ -21,6 +21,42 @@ import java.util.stream.Stream;
 
 //ENTITIES
 
+
+public class Rent {
+
+    private String nome;
+    private String email;
+
+    public Rent(String name, String email) {
+        this.nome = name;
+        this.email = email;
+    }
+
+    public String getName() {
+        return nome;
+    }
+
+    public void setName(String name) {
+        this.nome = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "name='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}
+
+
 public class Rectangle {
 
     public double width;
