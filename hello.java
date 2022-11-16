@@ -21,6 +21,31 @@ import java.util.stream.Stream;
 
 //ENTITIES
 
+public enum Meses {
+    JANEIRO(300),
+    FEVEREIRO(500),
+    MARCO(1500),
+    ABRIL (2000),
+    MAIO (500),
+    JUNHO(600),
+    JULHO(350),
+    AGOSTO(500),
+    SETEMBRO(1200),
+    OUTUBRO(1500),
+    NOVEMBRO(2500),
+    DEZEMBRO(1500);
+    private int valor;
+
+    Meses(int valor){
+        this.valor = valor;
+    }
+
+    public int getValor() {
+        return valor;
+    }
+}
+
+
 
 public class Rent {
 
@@ -185,6 +210,59 @@ public class Employee {
 
 
 //Application
+
+public class Application {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+
+        System.out.print("1-Janeiro \n2-Fevereiro \n3-Março \n4-Abril" +
+                " \n5-Maio \n6-Junho \n7-Julho \n8-Agosto \n9-Setembro"+
+                " \n10-Outubro \n11-Novembro \n12-Dezembro \n\nDigite o mês: ");
+        int mes = sc.nextInt();
+        int despesaMes = 0;
+        String nomeMes = "";
+
+        if (mes == 1){
+            despesaMes = Meses.JANEIRO.getValor();
+            nomeMes = "Janeiro";
+        } else if (mes == 2){
+            despesaMes = Meses.FEVEREIRO.getValor();
+            nomeMes = "Fevereiro";
+        } else if (mes == 3){
+            despesaMes = Meses.MARCO.getValor();
+            nomeMes = "Março";
+        } else if (mes == 4){
+            despesaMes = Meses.ABRIL.getValor();
+            nomeMes = "Abril";
+        } else if (mes == 5){
+            despesaMes = Meses.MAIO.getValor();
+            nomeMes = "Maior";
+        } else if (mes == 6){
+            despesaMes = Meses.JUNHO.getValor();
+            nomeMes = "Junho";
+        } else if (mes == 7){
+            despesaMes = Meses.JULHO.getValor();
+            nomeMes = "Julho";
+        } else if (mes == 8){
+            despesaMes = Meses.AGOSTO.getValor();
+            nomeMes = "Agosto";
+        } else if (mes == 9){
+            despesaMes = Meses.SETEMBRO.getValor();
+            nomeMes = "Setembro";
+        }  else if (mes == 10){
+            despesaMes = Meses.OUTUBRO.getValor();
+            nomeMes = "Outubro";
+        } else if (mes == 11){
+            despesaMes = Meses.NOVEMBRO.getValor();
+            nomeMes = "Novembro";
+        } else if (mes == 12){
+            despesaMes = Meses.DEZEMBRO.getValor();
+            nomeMes = "Dezembro";
+        }
+
+        System.out.printf("Mês: %s \nValor gasto: %d", nomeMes, despesaMes);
+    }
+}
 
 
 public class Questao03 {
