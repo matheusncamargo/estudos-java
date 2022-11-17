@@ -211,6 +211,69 @@ public class Employee {
 
 //Application
 
+package Aula_03;
+
+/*
+Faça o exercício anterior com o operador ternário
+ */
+
+import java.util.Scanner;
+
+public class Questao02 {
+    public static void main(String[] args) { Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite a idade do eleitor: ");
+        int idade = sc.nextInt();
+
+        String mensagem =   (idade >= 18 && idade <= 70) ?   "Voto obrigatório!" :
+                            (idade >= 16)  ?                 "Voto facultativo" :
+                                                             "Sem direito a votar" ;
+
+
+        System.out.println(mensagem);
+    }
+}
+
+
+package Aula_03;
+
+/*
+Escreva um programa para verificar se uma pessoa pode votar ou não,
+de acordo com sua idade. O programa deve escrever na tela as seguintes informacões:
+
+"Voto obrigatório"  - para eleitoras e eleitores, com idades entre 18 e 70 anos.
+
+"Voto  facultativo" - para maiores ou iguais a 16 anos e menores de 18 anos;
+ assim como maiores de 70 anos.
+
+"Sem direito a votar" - para o restante.
+
+* Exemplo
+Entrada - 16
+Saida - Voto Facultativo
+ */
+
+import java.util.Scanner;
+
+public class Questao01 {
+    public static void main(String[] args) {
+        System.out.print("Digite a idade do eleitor: ");
+        votaOuNao();
+    }
+
+    private static void votaOuNao(){
+        Scanner sc = new Scanner(System.in);
+        int idade = sc.nextInt();
+        if (idade >= 18 && idade <= 70){
+            System.out.println("Voto obrigatório!");
+        } else if ((idade >= 16 && idade < 18) || idade > 70){
+            System.out.println("Voto facultativo");
+        } else {
+            System.out.println("Sem direito a votar");
+        }
+    }
+}
+
 public class Application {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
