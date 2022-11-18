@@ -211,7 +211,120 @@ public class Employee {
 
 //Application
 
-package Aula_03;
+
+/*
+Faça o exercício anterior, utilizando if-else
+ */
+
+import java.util.Scanner;
+
+public class Questao04 {
+    public static void main(String[] args) {
+        System.out.printf(
+                        "\n1 - Coca-Cola - R$ 5" +
+                        "\n2 - Coca-Cola Zero - R$ 4.50" +
+                        "\n3 - Pepsi - R$ 4,40" +
+                        "\n4 - Guaraná Antarctica - R$ 3,50" +
+                        "\n5 - Fanta Laranja - R$ 4,23" +
+                        "\n6 - Água - R$ 2,50 " +
+                        "\nSelecione o número da bebida desejada: ");
+        vendaBebidas();
+    }
+
+    private static void vendaBebidas(){
+        Scanner sc = new Scanner(System.in);
+        int numero = sc.nextInt();
+
+        if (numero == 1){
+            System.out.println("Coca-Cola - R$ 5");
+        } else if (numero == 2){
+            System.out.println("Coca-Cola Zero - R$ 4.50");
+        } else if (numero == 3){
+            System.out.println("Pepsi - R$ 4,40");
+        } else if (numero == 4){
+            System.out.println("Guaraná Antarctica - R$ 3,50");
+        } else if (numero == 5){
+            System.out.println("Fanta Laranja - R$ 4,23");
+        } else if (numero == 6){
+            System.out.println("Água - R$ 2,50");
+        }
+    }
+}
+
+
+/*
+Escreva um programa que simule uma máquina de venda de bebidas.
+O usuário poderá escolher dentre 6 opções de bebidas abaixo:
+
+1 - Coca-Cola - R$ 5
+2 - Coca-Cola 0 - R$ 4.50
+3 - Pepsi - R$ 4,40
+4 - Guaraná Antarctica - R$ 3,50
+5 - Fanta Laranja - R$ 4,23
+Água - R$ 2,50
+O programa devera imprimir na tela o nome e preço do
+refrigerante selecionado, utilize switch.
+ */
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Questao03 {
+    public static void main(String[] args) {
+            System.out.printf(
+                    "\n1 - Coca-Cola - R$ 5" +
+                            "\n2 - Coca-Cola Zero - R$ 4.50" +
+                            "\n3 - Pepsi - R$ 4,40" +
+                            "\n4 - Guaraná Antarctica - R$ 3,50" +
+                            "\n5 - Fanta Laranja - R$ 4,23" +
+                            "\n6 - Água - R$ 2,50 " +
+                            "\nSelecione o número da bebida desejada: ");
+
+            //Múltiplos "catch"
+            //Algumas exceções podem ser agrupadas no mesmo catch com ||
+
+            try{
+                vendaDeBebidas();
+            } catch (InputMismatchException exception) {
+                System.out.println("Erro! Digite um número entre 1-6.");;
+                System.exit(0);    //Encerra o try/catch, não deixa o finally ser executado
+            } catch (Throwable e) {
+                System.out.println("Ocorreu algum erro, não sei qual foi!");;
+            } finally {
+                System.out.println("Essa linha é sempre impressa após o try ou catch");
+            }
+    }
+        private static void vendaDeBebidas() {
+            Scanner sc = new Scanner(System.in);
+            int numero = sc.nextInt();
+
+            switch (numero) {
+                case (1):
+                    System.out.println("Coca-Cola - R$ 5");
+                    break;
+                case (2):
+                    System.out.println("Coca-Cola Zero - R$ 4.50");
+                    break;
+                case (3):
+                    System.out.println("Pepsi - R$ 4,40");
+                    break;
+                case (4):
+                    System.out.println("Guaraná Antarctica - R$ 3,50");
+                    break;
+                case (5):
+                    System.out.println("Fanta Laranja - R$ 4,23");
+                    break;
+                case (6):
+                    System.out.println("Água - R$ 2,50");
+                    break;
+                default:
+                    System.out.println("Digite um número entre 1-6.");
+            }
+        }
+}
+
+
+
 
 /*
 Faça o exercício anterior com o operador ternário
