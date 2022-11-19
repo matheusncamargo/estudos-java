@@ -211,6 +211,66 @@ public class Employee {
 
 //Application
 
+package Aula_04;
+
+/*
+Array - Principais tarefas
+1) Busca
+2) Ordenação
+3) Imprimir
+ */
+
+import java.util.Arrays;
+
+public class Notes2_Arrays {
+    public static void main(String[] args) {
+        int [] numeros = new int[3];
+        numeros[0] = 1;
+        numeros[1] = 10;
+        numeros[2] = 9;
+
+        Arrays.sort(numeros);
+//        atalho: numeros.for
+//        for (int numero : numeros) {
+//            System.out.println(numero);
+//        }
+
+//      Busca binária != busca sequencial
+//      Quanto mais itens dentro do vetor, mais rápida é a busca binária
+//      Busca linear busca iten por iten
+
+        System.out.println(Arrays.toString(numeros));
+        System.out.println(Arrays.binarySearch(numeros, 9));
+
+
+    }
+}
+
+package Aula_04;
+
+//static -> opcional
+//void -> não retorna nada (pode colocar "return;" para dar um break)
+
+//private -> só é visto dentro do package
+//public -> é visto em outros packages
+
+//Não pode ter dois métodos com a mesma assinatura
+//Pode ter método com mesmo nome, mas com mais parâmetros
+
+public class Notes_Aula {
+    public static void main(String[] args) {
+        soneca(55,32);
+    }
+
+    private static void soneca (int segundos){
+        System.out.println("Falta(m) " + segundos + " segundos.");
+    }
+
+    private static void soneca (int minutos, int segundos){
+        System.out.println("Falta(m) " + minutos + " minutos e " + segundos + " segundos.");
+    }
+}
+
 
 /*
 Faça o exercício anterior, utilizando if-else
